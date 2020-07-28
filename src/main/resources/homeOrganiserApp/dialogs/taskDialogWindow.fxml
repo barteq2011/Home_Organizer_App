@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="homeOrganiserApp.TaskDialogWindowController"
+            prefHeight="250.0" prefWidth="400.0" style="-fx-border-color: black;">
+        <content>
+            <GridPane hgap="20" vgap="10">
+                <Label text="Nazwa:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <TextField fx:id="titleField" prefWidth="200" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                <Label text="Termin ( Data ):" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <DatePicker fx:id="deadlinePicker" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="100"/>
+                <Label text="Termin ( Godzina )" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <HBox GridPane.rowIndex="2" GridPane.columnIndex="1">
+                    <VBox>
+                            <TextField alignment="CENTER" text="12" fx:id="hourField" prefWidth="36"/>
+                        <HBox>
+                            <Button text="+" style="-fx-font-size:10;" onAction="#handleHoursPlusButton" prefWidth="18"/>
+                            <Button text="-" style="-fx-font-size:10;" onAction="#handleHoursMinusButton" prefWidth="18"/>
+                        </HBox>
+                    </VBox>
+                    <Label text=":"/>
+                    <VBox>
+                        <TextField alignment="CENTER" text="00" fx:id="minuteField" prefWidth="36"/>
+                        <HBox>
+                            <Button text="+" style="-fx-font-size:10;" onAction="#handleMinutesPlusButton" prefWidth="18"/>
+                            <Button text="-" style="-fx-font-size:10;" onAction="#handleMinutesMinusButton" prefWidth="18"/>
+                        </HBox>
+                    </VBox>
+                </HBox>
+                <Label text="Treść:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                <TextArea fx:id="descriptionArea" GridPane.columnIndex="1" GridPane.rowIndex="3" prefHeight="70" prefWidth="200" wrapText="true"/>
+            </GridPane>
+        </content>
+</DialogPane>

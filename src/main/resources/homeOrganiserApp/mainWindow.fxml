@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="mainBorderPane" fx:id="mainBorderPane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="homeOrganiserApp.MainWindowController" prefHeight="400.0" prefWidth="600.0" stylesheets="@styles/style.css">
+        <top>
+            <MenuBar fx:id="mainMenuBar" prefHeight="30">
+                <Menu text="Menu">
+                    <MenuItem text="Nowe zadanie..." onAction="#handleNewTaskMenuItem"/>
+                    <MenuItem text="Modyfikuj zadanie" onAction="#handleModifyMenuItem"/>
+                    <MenuItem text="Usuń zadanie" onAction="#handleDeleteMenuItem"/>
+                    <SeparatorMenuItem/>
+                    <MenuItem text="O programie" onAction="#handleAboutMenuItem"/>
+                    <SeparatorMenuItem/>
+                    <MenuItem text="Wyjście" style="-fx-text-fill: red;" onAction="#handleExitMenuItem"/>
+                </Menu>
+            </MenuBar>
+        </top>
+        <left>
+            <ListView id="tasksList" fx:id="tasksList" prefWidth="150"/>
+        </left>
+        <center>
+            <VBox alignment="CENTER">
+                <Label prefHeight="30" alignment="CENTER" textAlignment="CENTER" style="-fx-font-size: 14;" fx:id="taskTitleLabel"/>
+                <TextArea id="descriptionArea" wrapText="true" editable="false" fx:id="taskDescriptionArea" VBox.vgrow="ALWAYS"/>
+                <HBox id="deadlineHBox" prefHeight="30" alignment="CENTER">
+                    <Label text="Termin:"/>
+                    <Label fx:id="taskDeadLineLabel"/>
+                </HBox>
+            </VBox>
+        </center>
+</BorderPane>

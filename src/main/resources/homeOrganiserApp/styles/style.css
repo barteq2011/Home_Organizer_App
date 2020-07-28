@@ -1,0 +1,22 @@
+#mainBorderPane {
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-font-size: 13;
+    -fx-font-family: "Arial";
+}
+#deadlineHBox {
+    -fx-font-size: 15;
+    -fx-background-color: #aee0e8;
+}
+#descriptionArea .content{
+    -fx-background-image: url("textAreaBackground.png");
+    -fx-background-size: 100% 100%;
+    -fx-background-color: transparent;
+}
+#tasksList {
+    -fx-background-color: #d9b8b2;
+}
+#tasksList .list-cell{
+    -fx-fornt-size: 14;
+    -fx-control-inner-background: #d9b8b2;
+}
